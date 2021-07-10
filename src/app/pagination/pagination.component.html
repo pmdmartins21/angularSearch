@@ -1,0 +1,19 @@
+<!-- <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <a class="page-link" [routerLink]="['/search' , searchText.query, previous() ]">Previous</a>
+      <a class="page-link" [routerLink]="['/search' , searchText.query,  next() ]">Next</a>
+    </ul>
+  </nav> -->
+
+
+ 
+    <ul class="pagination">
+      <li class="page-item" [ngClass]="{'disabled': firstPage()}">
+        <a class="page-link" [routerLink]="['/search' , searchText.query, previous()]" tabindex="-1" aria-disabled="true">Previous</a>
+      </li>
+     
+      <li class="page-item" [ngClass]="{'disabled': lastPage()}">  
+        <a class="page-link" [routerLink]="['/search' , searchText.query,  next()]">Next</a>
+      </li>
+    </ul>
+{{ totalPages }}

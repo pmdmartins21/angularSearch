@@ -1,0 +1,23 @@
+pagination tem no bootstrap for angular
+
+implementar on destroy -> unsubscribe
+
+adicionar o fit e crop 
+
+
+
+converter timestamp nos details
+
+
+
+
+
+remover serviços duplicados
+
+apikey pode ser usado apenas no serviço
+
+paginaçao, guardar onde a pagina atual e total
+
+o erro nos details desaparece se remover o +fit&crop do html e incorporar de alguma maneira noutra parte do componente
+
+qd adciono e removo nos details adiciona x vezes aos favoritos.

@@ -1,0 +1,33 @@
+
+<div class="card mb-3 m-auto" style="max-width: 1100px;">
+    <div class="row g-0">
+      <div class="col-md-6">
+        <img src="{{ newImage.image_url + '&fit=crop&w=500&h=500' }}" alt="">
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+          <h2 class="card-title">{{ newImage.title }}</h2>
+          <h3 class="card-title _greyFont">{{ newImage.author }}</h3>
+          <h5 class="card-title">{{ newImage.date_added }}</h5>
+          <div class="btn btn-lg btn-dark p-1 m-2">
+              <span>Likes</span>
+              <span class="btn btn-sm btn-secondary m-1 p-1">{{ newImage.likes }}</span>
+          </div>
+          <div class="btn btn-lg btn-dark m-2">
+            <span>Downloads</span>
+            <span class="btn btn-sm btn-secondary  ml-2">{{ newImage.downloads }}</span>
+        </div>
+        <div class="btn btn-lg btn-light m-2" id="fav_box"  (click)="toggleFavorite()" [ngClass]="{ 'bg-danger':newImage.favorite }">       
+          <fa-icon *ngIf="newImage.favorite; else addIcon" [icon]="faMinusCircle" id="fav_icon"></fa-icon>
+          <ng-template #addIcon>
+            <fa-icon [icon]="faPlusCircle" id="fav_icon"></fa-icon>
+          </ng-template>      
+          <span class="ml-2">Favorite</span>
+        </div>
+        <div class="btn btn-xs btn-outline-secondary m-1" *ngFor="let tag of newImage.tags">
+            {{ tag }}
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
